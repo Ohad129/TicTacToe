@@ -2,7 +2,10 @@ import random
 
 def choose_begginer() -> int:
     # the func will return who is begins the game
-    pass
+    x = random.randint(0, 1)
+    if x == 0:
+        return 'x'
+    return 'o'
 
 def create_board() -> list:
     # the func will return a new empty board
@@ -11,11 +14,14 @@ def create_board() -> list:
 
 def print_board(board: list):
     # the func will print the current board
-    pass
+    for i in range(1, 9 + 1, 3):
+        print(f"{board[i]} | {board[i + 1]} | {board[i + 2]}")
+        print("---+---+---")
 
 def get_move(player, board) -> int:
     # the func will get legal move from the player(1-9, only available spots)
     # return: players choice
+
     pass
 
 def make_move(board, position, symbol):
